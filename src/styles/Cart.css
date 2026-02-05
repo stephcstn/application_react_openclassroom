@@ -1,5 +1,24 @@
 .lmj-cart {
-    padding: 32px;
     color: white;
-    background-color: #31b572;
+	background-color: #31b572;
+	padding: 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 100%;
+    align-items: center;
+}
+
+.lmj-close-button {
+    align-self: flex-start;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.lmj-empty-button {
+    cursor: pointer;
+    width: 150px;
 }

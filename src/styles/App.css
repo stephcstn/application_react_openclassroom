@@ -5,3 +5,17 @@
 .lmj-logo {
     width: 40px;
 }
+
+body {
+    margin: 0;
+}
+
+.lmj-main-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: stretch;
+}
+
+.lmj-layout-content {
+    flex: 1; 
+}

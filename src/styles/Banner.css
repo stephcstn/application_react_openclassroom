@@ -6,4 +6,6 @@
     display: flex;
 	justify-content: flex-end;
 	align-items: center;
+    position: flex;
+    height: 50px;
 }

@@ -5,8 +5,11 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	width: 100%;
+	width: 10%;
     align-items: center;
+    position: flex;
+    height: auto; 
+    min-height: 100%;
 }
 
 .lmj-close-button {

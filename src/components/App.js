@@ -9,14 +9,16 @@ import '../styles/App.css'
 function App() {
 	const [cart, updateCart] = useState([])
 	return (
-		<div>
+		<div className="lmj-layout">
 			<Banner>
 				<img src={logo} alt='La maison jungle' className='lmj-logo' />
 				<h1 className='lmj-title'>La maison jungle</h1>
 			</Banner>
-			<div className='lmj-layout-content'>
-				<ShoppingList cart = {cart} updateCart = {updateCart} />
+			<div className="lmj-main-container">
 				<Cart cart = {cart} updateCart = {updateCart}/>
+				<div className='lmj-layout-content'>
+					<ShoppingList cart = {cart} updateCart = {updateCart} />
+				</div>
 			</div>
 			<Footer />
 		</div>

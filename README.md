@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# La Maison Jungle
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**La Maison Jungle** est une boutique de plantes d'intérieur et d'extérieur réalisée avec React dans le cadre de ma formation OpenClassrooms. L'application permet de parcourir un catalogue, de filtrer les plantes par catégorie et de composer un panier avec un total calculé en temps réel.
 
-## Available Scripts
+> Projet pédagogique front-end : le catalogue repose sur des données locales et l'application ne traite pas de paiement ni de commande réelle.
 
-In the project directory, you can run:
+## Objectifs pédagogiques & enjeux techniques
 
-### `npm start`
+Ce projet m'a permis de mettre en pratique les fondamentaux de React dans une application concrète :
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Découper l'interface en composants réutilisables et spécialisés.
+- Partager un état entre plusieurs composants avec `useState` et le passage de props.
+- Gérer des interactions et des données dérivées : filtre par catégorie, quantités et total du panier.
+- Afficher une liste de données avec `map`, des clés React et un rendu conditionnel.
+- Créer des champs contrôlés et synchroniser leur valeur avec l'état de l'interface.
+- Monter en compétence rapidement sur l'écosystème React et ses conventions.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Stack technique & architecture
 
-### `npm test`
+| Technologie | Utilisation |
+| --- | --- |
+| ![React](https://img.shields.io/badge/React-19.2.4-61DAFB?logo=react&logoColor=white) | Construction de l'interface à partir de composants et gestion de l'état avec les hooks. |
+| ![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?logo=javascript&logoColor=black) | Logique applicative, manipulation des données et interactions. |
+| ![CSS](https://img.shields.io/badge/CSS-styles-663399?logo=css3&logoColor=white) | Feuilles de style séparées pour structurer et mettre en forme l'interface. |
+| ![Create React App](https://img.shields.io/badge/Create_React_App-5.0.1-09D3AC?logo=create-react-app&logoColor=white) | Environnement de développement et scripts de build du projet. |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+L'application est organisée autour de composants dédiés au bandeau, au catalogue, aux filtres, aux fiches produit, au panier et au pied de page. Le panier est conservé dans l'état de `App`, puis transmis aux composants concernés afin que le catalogue et le récapitulatif restent synchronisés. Les plantes sont définies dans un jeu de données local.
 
-### `npm run build`
+**Pas de React Router ni de bibliothèque de state management** : le projet est une interface monopage dont les besoins d'état sont couverts par les hooks React.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Fonctionnalités clés
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Parcours d'un catalogue de plantes avec prix et indicateurs de besoins en lumière et en eau.
+- Filtrage des produits par catégorie et réinitialisation du filtre.
+- Ajout de plantes au panier ; les ajouts successifs incrémentent la quantité du produit correspondant.
+- Ouverture et fermeture du panier, affichage des articles et calcul du total.
+- Vidage du panier.
+- Champ e-mail contrôlé dans le pied de page, avec une vérification simple de la présence du caractère `@`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Compétences acquises & bonnes pratiques
 
-### `npm run eject`
+- Structurer une application React en composants cohérents et réutilisables.
+- Utiliser des props pour faire circuler données et callbacks entre composants.
+- Mettre à jour l'état de façon immuable et produire des listes avec des clés stables.
+- Séparer les données, les composants et les styles pour faciliter la lecture du projet.
+- Fournir des textes alternatifs aux images et privilégier les éléments HTML adaptés aux interactions.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Ce projet constitue une base d'apprentissage front-end : la validation de l'e-mail est volontairement minimale et pourra être renforcée dans une évolution, tout comme l'ajout de tests et l'amélioration de l'accessibilité.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation & lancement local
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Prérequis
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [Node.js](https://nodejs.org/) et npm
+- Git pour cloner le dépôt
 
-## Learn More
+### Démarrer l'application
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+git clone <url-du-depot>
+cd application_react_openclassroom
+npm install
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Le serveur de développement démarre avec Create React App. Ouvrez ensuite [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-### Code Splitting
+### Scripts disponibles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm test       # Lance les tests en mode interactif
+npm run build  # Génère la version de production dans build/
+```
